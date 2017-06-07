@@ -7,13 +7,13 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class institute : IMigrationMetadata
+    public sealed partial class DBInit : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(institute));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DBInit));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705300713542_institute"; }
+            get { return "201706070900445_DBInit"; }
         }
         
         string IMigrationMetadata.Source

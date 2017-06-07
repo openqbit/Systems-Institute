@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class ParentInformation
     {
-        public int Id { get; set; }
+        public int ParentInformationId { get; set; }
         public virtual Person Mother { get; set; }
         public virtual Person Father { get; set; }
 
