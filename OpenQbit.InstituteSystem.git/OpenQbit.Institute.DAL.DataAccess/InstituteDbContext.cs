@@ -33,7 +33,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
         public DbSet<Branch> Branch{ get; set; }
         public DbSet<BranchResourceAllocation> BranchResourceAllocation { get; set; }
         public DbSet<Employee> Employee { get; set; }
-        public DbSet<Institut> Institut { get; set; }
+        public DbSet<Common.Models.Institute> Institute { get; set; }
         public DbSet<Lecture> Lecture { get; set; }
         public DbSet<ParentInformation> ParentInformation { get; set; }
         public DbSet<Person> Person { get; set; }

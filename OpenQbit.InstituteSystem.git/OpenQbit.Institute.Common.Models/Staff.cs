@@ -9,7 +9,7 @@ namespace OpenQbit.Institute.Common.Models
     public class Staff
     {
         public int StaffID { get; set; }
-        public string Name { get; set; }
+        public string StaffName { get; set; }
         public string Address{ get; set; }
         public int Telephone { get; set; }
         public string Category { get; set; }

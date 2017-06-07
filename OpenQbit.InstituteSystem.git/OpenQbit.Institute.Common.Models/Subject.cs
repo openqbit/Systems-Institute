@@ -10,6 +10,6 @@ namespace OpenQbit.Institute.Common.Models
     {
         public int SubjectId { get; set; }
 
-        public string Name { get; set; }
+        public string SubjectName { get; set; }
     }
 }
