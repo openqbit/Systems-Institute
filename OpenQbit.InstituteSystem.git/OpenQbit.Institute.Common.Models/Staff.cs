@@ -13,5 +13,7 @@ namespace OpenQbit.Institute.Common.Models
         public string Address{ get; set; }
         public int Telephone { get; set; }
         public string Category { get; set; }
+        public int EmployeeId { get; set; }
+        public virtual Employee Employe { get; set; }
     }
 }

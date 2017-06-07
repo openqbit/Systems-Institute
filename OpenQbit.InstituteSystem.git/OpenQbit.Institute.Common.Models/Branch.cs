@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class Branch
     {
-        public string Id { get; set; }
+        public int BranchId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
 

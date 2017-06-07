@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class Institut
     {
-        public int Id { get; set; }
+        public int InstitutId { get; set; }
         public string Name { get; set; }
 
         public string WebSite { get; set; }

@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class BatchEnrolment
     {
-        public int Id { get; set; }
+        public int BatchEnrolmentId { get; set; }
 
         public int StudentLimit { get; set; }
 

@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class Batch
     {
-        public string Id { get; set; }
+        public int BatchId { get; set; }
         public string Name { get; set; }
         public int BranchId { get; set; }
         public virtual Branch Branch { get; set; }

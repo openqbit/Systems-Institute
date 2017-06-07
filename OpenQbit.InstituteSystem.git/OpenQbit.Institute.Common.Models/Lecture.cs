@@ -15,6 +15,8 @@ namespace OpenQbit.Institute.Common.Models
         public string Address { get; set; }
         public string Specify { get; set; }
         public int SubjectID { get; set; }
+        public int EmployeeId { get; set; }
+        public virtual Employee Employe{get;set;}
         public virtual Subject Subject { get; set; }
     }
 }

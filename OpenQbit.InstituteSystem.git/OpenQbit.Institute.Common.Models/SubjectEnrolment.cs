@@ -8,7 +8,7 @@ namespace OpenQbit.Institute.Common.Models
 {
     public class SubjectEnrolment
     {
-        public int Id { get; set; }
+        public int SubjectEnrolmentId { get; set; }
 
         public int SubjectId { get; set; }
 
