@@ -17,7 +17,7 @@ namespace OpenQbit.Institute.Common.Models
         public int ParentInformationId { get; set; }
         public int PersonId { get; set; }
         public virtual ParentInformation ParentInformation { get; set; }
-        public virtual Person Pereson { get;set }
+        public virtual Person Pereson { get;set ;}
         public ICollection<BatchEnrolment> BatchEnrolment { get; set; }
 
 
