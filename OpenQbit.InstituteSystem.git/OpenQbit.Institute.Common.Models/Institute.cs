@@ -14,5 +14,6 @@ namespace OpenQbit.Institute.Common.Models
         public string WebSite { get; set; }
 
         public string Email { get; set; }
+
     }
 }
