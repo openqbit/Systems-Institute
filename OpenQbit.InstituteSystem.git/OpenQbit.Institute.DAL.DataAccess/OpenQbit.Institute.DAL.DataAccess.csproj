@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +72,10 @@
     <ProjectReference Include="..\OpenQbit.Institute.Common.Models\OpenQbit.Institute.Common.Models.csproj">
       <Project>{f881013f-cfc1-496c-b575-83c9a7886d30}</Project>
       <Name>OpenQbit.Institute.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess.Contracts\OpenQbit.Institute.DAL.DataAccess.Contracts.csproj">
+      <Project>{2ebf39a5-3a4e-4333-a1d1-50c3300d8ea6}</Project>
+      <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
