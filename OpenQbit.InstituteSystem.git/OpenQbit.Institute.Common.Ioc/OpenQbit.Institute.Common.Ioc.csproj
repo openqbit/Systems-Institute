@@ -74,10 +74,6 @@
       <Project>{3ba17049-db1b-4a3e-b744-40926914d268}</Project>
       <Name>OpenQbit.Institute.BLL.Service.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OpenQbit.Institute.Common.Utils.Log\OpenQbit.Institute.Common.Utils.Logs.csproj">
-      <Project>{1aad4da1-0ca6-4d33-8cd6-b854061c2df4}</Project>
-      <Name>OpenQbit.Institute.Common.Utils.Logs</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess.Contracts\OpenQbit.Institute.DAL.DataAccess.Contracts.csproj">
       <Project>{2ebf39a5-3a4e-4333-a1d1-50c3300d8ea6}</Project>
       <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
