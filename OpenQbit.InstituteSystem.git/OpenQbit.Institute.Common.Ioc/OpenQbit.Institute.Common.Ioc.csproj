@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{516C1399-ECED-475C-B6A4-3CB88966000D}</ProjectGuid>
+    <ProjectGuid>{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenQbit.Institute.BLL.InstituteService1</RootNamespace>
-    <AssemblyName>OpenQbit.Institute.BLL.InstituteService1</AssemblyName>
+    <RootNamespace>OpenQbit.Institute.Common.Ioc</RootNamespace>
+    <AssemblyName>OpenQbit.Institute.Common.Ioc</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -56,21 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BatchEnrolmentManager.cs" />
-    <Compile Include="BatchManager.cs" />
-    <Compile Include="BranchManager.cs" />
-    <Compile Include="BranchResourceAllocationManager.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Institute.BLL.InstituteService1\OpenQbit.Institute.BLL.InstituteService1.csproj">
+      <Project>{516c1399-eced-475c-b6a4-3cb88966000d}</Project>
+      <Name>OpenQbit.Institute.BLL.InstituteService1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj">
       <Project>{3ba17049-db1b-4a3e-b744-40926914d268}</Project>
       <Name>OpenQbit.Institute.BLL.Service.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenQbit.Institute.Common.Models\OpenQbit.Institute.Common.Models.csproj">
-      <Project>{f881013f-cfc1-496c-b575-83c9a7886d30}</Project>
-      <Name>OpenQbit.Institute.Common.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.Common.Utils.Log\OpenQbit.Institute.Common.Utils.Logs.csproj">
       <Project>{1aad4da1-0ca6-4d33-8cd6-b854061c2df4}</Project>
@@ -80,9 +82,10 @@
       <Project>{2ebf39a5-3a4e-4333-a1d1-50c3300d8ea6}</Project>
       <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess\OpenQbit.Institute.DAL.DataAccess.csproj">
+      <Project>{01ba2ec5-d264-4275-9808-a8c84992ba14}</Project>
+      <Name>OpenQbit.Institute.DAL.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
