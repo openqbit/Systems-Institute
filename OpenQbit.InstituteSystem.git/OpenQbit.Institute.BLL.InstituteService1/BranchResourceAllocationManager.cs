@@ -14,16 +14,17 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         private Repository _db = new Repository();
 
 
-        public bool CreateBranchResourceAllocation(int BranchId, int ResourceId)
+        public bool CreateBranchResourceAllocation(BranchResourceAllocation newBranchResourceAllocation)
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
+
             return _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
         }
 
         public bool RemoveBranchResourceAllocation(int BranchResourceAllocationID)
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.Delete<BranchResourceAllocation>(newBranchResourceAllocation);
+            //BranchResourceAllocation br = _db.Find(BranchResourceAllocationID);
+            BranchResourceAllocation br = new BranchResourceAllocation { BranchId = BranchResourceAllocationID };
+            return _db.Delete<BranchResourceAllocation>(br);
         }
         public Branch FindBranchResourceAllocation(int BranchResourceAllocationId)
         {
