@@ -20,6 +20,10 @@ namespace OpenQbit.Institute.Common.Ioc
         private static void Register()
         {
             Container.RegisterType<IBranchResourceAllocationManager, BranchResourceAllocationManager>();
+            Container.RegisterType<IBatchEnrolmentManager, BatchEnrolmentManager>();
+            Container.RegisterType<IBatchManager, BatchManager>();
+            Container.RegisterType<IBranchManager, BranchManager>();
+            Container.RegisterType<IInstituteManager, InstituteManager>();
             Container.RegisterType<IEmployeeManager, EmployeeManager>();
             Container.RegisterType<IRepository, Repository>();
             Container.RegisterType<ILogger, LoggerB>();

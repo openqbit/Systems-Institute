@@ -5,15 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 
 using OpenQbit.Institute.Common.Ioc;
-using OpenQbit.Institute.BLL.Service.Contracts;
-
+using OpenQbit.Institute.BLL.InstituteService1;
 namespace OpenQbit.Institute.Presentation.WebTest.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            IBranchResourceAllocationManager BranchManager = UnityResolver.Resolve<IBranchResourceAllocationManager>();
+           // IBranchResourceAllocationManager BranchManager = UnityResolver.Resolve<IBranchResourceAllocationManager>();
            // IBranchResourceAllocationManager BranchManager = new BranchResourceAllocationManager();
             return View();
         }

@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBatchEnrolmentManager.cs" />
+    <Compile Include="IBatchManager.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="IBranchManager.cs" />
     <Compile Include="IBranchResourceAllocationManager.cs" />
     <Compile Include="IEmployeeManager.cs" />
     <Compile Include="IInstituteManager.cs" />
