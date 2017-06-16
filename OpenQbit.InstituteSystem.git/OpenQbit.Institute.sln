@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Common.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.DAL.DataAccess", "OpenQbit.Institute.DAL.DataAccess\OpenQbit.Institute.DAL.DataAccess.csproj", "{01BA2EC5-D264-4275-9808-A8C84992BA14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.BLL.InstituteService1", "OpenQbit.Institute.BLL.InstituteService1\OpenQbit.Institute.BLL.InstituteService1.csproj", "{516C1399-ECED-475C-B6A4-3CB88966000D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{BA6FA7B4-1091-422F-B8F3-0838AAC72638}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Common.Ioc", "OpenQbit.Institute.Common.Ioc\OpenQbit.Institute.Common.Ioc.csproj", "{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87}"
@@ -29,9 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.DAL.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Presentation.WebTest", "OpenQbit.Institute.Presentation.WebTest\OpenQbit.Institute.Presentation.WebTest.csproj", "{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Common.Utils.Logs", "OpenQbit.Institute.Common.Utils.Log\OpenQbit.Institute.Common.Utils.Logs.csproj", "{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.BLL.Service.Contracts", "OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj", "{3BA17049-DB1B-4A3E-B744-40926914D268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Common.Utils.Logs", "OpenQbit.Institute.Common.Utils.Log\OpenQbit.Institute.Common.Utils.Logs.csproj", "{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.BLL.InstituteService1", "OpenQbit.Institute.BLL.InstituteService1\OpenQbit.Institute.BLL.InstituteService1.csproj", "{516C1399-ECED-475C-B6A4-3CB88966000D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{01BA2EC5-D264-4275-9808-A8C84992BA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01BA2EC5-D264-4275-9808-A8C84992BA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01BA2EC5-D264-4275-9808-A8C84992BA14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{516C1399-ECED-475C-B6A4-3CB88966000D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{516C1399-ECED-475C-B6A4-3CB88966000D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{516C1399-ECED-475C-B6A4-3CB88966000D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{516C1399-ECED-475C-B6A4-3CB88966000D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,14 +59,18 @@ Global
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BA17049-DB1B-4A3E-B744-40926914D268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BA17049-DB1B-4A3E-B744-40926914D268}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA17049-DB1B-4A3E-B744-40926914D268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA17049-DB1B-4A3E-B744-40926914D268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516C1399-ECED-475C-B6A4-3CB88966000D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516C1399-ECED-475C-B6A4-3CB88966000D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516C1399-ECED-475C-B6A4-3CB88966000D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516C1399-ECED-475C-B6A4-3CB88966000D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,12 +78,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F881013F-CFC1-496C-B575-83C9A7886D30} = {818A5764-F774-4157-BB88-DDB071A40B22}
 		{01BA2EC5-D264-4275-9808-A8C84992BA14} = {59A9FB34-BED0-41DA-B8AF-6062B7F36682}
-		{516C1399-ECED-475C-B6A4-3CB88966000D} = {7CD2B725-9992-450A-A91E-3EE881BE303F}
 		{BA6FA7B4-1091-422F-B8F3-0838AAC72638} = {818A5764-F774-4157-BB88-DDB071A40B22}
 		{2F09DB60-B93F-4BB0-B43E-FBFF2CB90E87} = {818A5764-F774-4157-BB88-DDB071A40B22}
 		{2EBF39A5-3A4E-4333-A1D1-50C3300D8EA6} = {59A9FB34-BED0-41DA-B8AF-6062B7F36682}
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB} = {24AD5689-7077-40FE-8273-A7D3BB462E73}
-		{3BA17049-DB1B-4A3E-B744-40926914D268} = {7CD2B725-9992-450A-A91E-3EE881BE303F}
 		{1AAD4DA1-0CA6-4D33-8CD6-B854061C2DF4} = {BA6FA7B4-1091-422F-B8F3-0838AAC72638}
+		{3BA17049-DB1B-4A3E-B744-40926914D268} = {7CD2B725-9992-450A-A91E-3EE881BE303F}
+		{516C1399-ECED-475C-B6A4-3CB88966000D} = {7CD2B725-9992-450A-A91E-3EE881BE303F}
 	EndGlobalSection
 EndGlobal

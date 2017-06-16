@@ -9,7 +9,6 @@ using OpenQbit.Institute.Common.Models;
 using OpenQbit.Institute.Common.Utils.Log;
 
 using Microsoft.Practices.Unity;
-
 using OpenQbit.Institute.BLL.Service.Contracts;
 
 namespace OpenQbit.Institute.BLL.InstituteService1
@@ -37,28 +36,34 @@ namespace OpenQbit.Institute.BLL.InstituteService1
 
             List<BranchResourceAllocation> bracnhList = new List<BranchResourceAllocation>();
 
-            foreach ( var resoude in resorceList)
+            foreach (var resoude in resorceList)
             {
                 BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation { BranchId = BranchId, ResourceId = resoude };
-                //_db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
-                bracnhList.Add(newBranchResourceAllocation);
+                _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
+                //bracnhList.Add(newBranchResourceAllocation);
             }
 
-
-            return _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
-            //return _db.Create<BranchResourceAllocation>()
+            return _db.Save();
+         
         }
 
         public bool RemoveBranchResourceAllocation(int BranchResourceAllocationID)
         {
-            //BranchResourceAllocation br = _db.Find(BranchResourceAllocationID);
-            BranchResourceAllocation br = new BranchResourceAllocation { BranchId = BranchResourceAllocationID };
+            BranchResourceAllocation br = _db.Find(BranchResourceAllocationID);
+
             return _db.Delete<BranchResourceAllocation>(br);
         }
         public Branch FindBranchResourceAllocation(int BranchResourceAllocationId)
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
+          
             return _db.FindList<BranchResourceAllocation>(BranchResourceAllocationId);
+        }
+
+
+
+        public bool Save()
+        {
+            return _db.Save();
         }
     }
 }

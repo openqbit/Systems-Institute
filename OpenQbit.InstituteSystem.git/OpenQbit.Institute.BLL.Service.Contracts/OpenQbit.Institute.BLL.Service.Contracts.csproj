@@ -42,7 +42,15 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="IBranchResourceAllocationManager.cs" />
+    <Compile Include="IEmployeeManager.cs" />
+    <Compile Include="IInstituteManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Institute.Common.Models\OpenQbit.Institute.Common.Models.csproj">
+      <Project>{f881013f-cfc1-496c-b575-83c9a7886d30}</Project>
+      <Name>OpenQbit.Institute.Common.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

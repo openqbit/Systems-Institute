@@ -21,10 +21,14 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 _db.Set<T>().Add(obj);
                 return true;
             }
-            catch (Exception edb) {
+            catch (Exception edb)
+            {
                 return false;
             }
         }
+
+
+
 
         public bool Delete<T>(T obj) where T : class
         {
@@ -38,6 +42,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 return false;
             }
         }
+
 
         public T Find<T>(Expression<Func<T, bool>> predicate) where T : class
         {
