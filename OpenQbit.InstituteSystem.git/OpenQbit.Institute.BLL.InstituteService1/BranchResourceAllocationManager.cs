@@ -1,34 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-using OpenQbit.Institute.DAL.DataAccess;
+using OpenQbit.Institute.DAL.DataAccess.Contracts;
 using OpenQbit.Institute.Common.Models;
+using OpenQbit.Institute.Common.Utils.Log;
+
+using Microsoft.Practices.Unity;
+
+using OpenQbit.Institute.BLL.Service.Contracts;
 
 namespace OpenQbit.Institute.BLL.InstituteService1
 {
-    class BranchResourceAllocationManager
+    public class BranchResourceAllocationManager : IBranchResourceAllocationManager
     {
-        private Repository _db = new Repository();
+        private IRepository _db;
+        private ILogger _logger;
 
 
-        public bool CreateBranchResourceAllocation(int BranchId, int ResourceId)
+        [InjectionConstructor]
+        public BranchResourceAllocationManager(IRepository repository, ILogger logger)
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
+            this._logger = logger;
+            _db = repository;
+        }
+        public bool Create<T>(T obj) where T : class
+        {
+            //Some Logics If Applicable
+            return _db.Create(obj);
         }
 
-        public bool RemoveBranchResourceAllocation(int BranchResourceAllocationID)
+        public bool Delete<T>(T obj) where T : class
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.Delete<BranchResourceAllocation>(newBranchResourceAllocation);
+            //Some Logics If Applicable
+            return _db.Delete(obj);
         }
-        public Branch FindBranchResourceAllocation(int BranchResourceAllocationId)
+
+        public T Find<T>(Expression<Func<T, bool>> predicate) where T : class
         {
-            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.FindList<BranchResourceAllocation>(BranchResourceAllocationId);
+            //Some Logics If Applicable
+            return _db.Find(predicate);
+        }
+
+        public List<T> FindList<T>(Expression<Func<T, bool>> predicate) where T : class
+        {
+            //Some Logics If Applicable
+            return _db.FindList(predicate);
+        }
+
+        public List<T> GetAll<T>() where T : class
+        {
+            //Some Logics If Applicable
+            return _db.GetAll<T>();
+        }
+
+
+        public bool Update<T>(T obj) where T : class
+        {
+            //Some Logics If Applicable
+            return _db.Update(obj);
+        }
+
+        public bool Save()
+        {
+            return _db.Save();
         }
     }
 }
