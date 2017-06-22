@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenQbit.Institute.BLL.Service.Contracts
+namespace OpenQbit.Institute.BLL.Service1.Contracts
 {
     public interface IBranchManager
     {

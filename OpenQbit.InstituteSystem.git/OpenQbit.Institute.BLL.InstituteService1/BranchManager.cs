@@ -10,7 +10,7 @@ using OpenQbit.Institute.Common.Utils.Log;
 
 using Microsoft.Practices.Unity;
 
-using OpenQbit.Institute.BLL.Service.Contracts;
+using OpenQbit.Institute.BLL.Service1.Contracts;
 
 namespace OpenQbit.Institute.BLL.InstituteService1
 {
@@ -26,6 +26,8 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             this._logger = logger;
             _db = repository;
         }
+      
+      
 
         public bool Create<T>(T obj) where T : class
         {

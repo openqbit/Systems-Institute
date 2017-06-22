@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using OpenQbit.Institute.Common.Ioc;
-using OpenQbit.Institute.BLL.Service.Contracts;
+using OpenQbit.Institute.BLL.Service1.Contracts;
 
 namespace OpenQbit.Institute.Presentation.WebTest.Controllers
 {

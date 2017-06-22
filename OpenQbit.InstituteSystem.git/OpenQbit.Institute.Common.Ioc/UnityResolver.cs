@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQbit.Institute.DAL.DataAccess;
 using OpenQbit.Institute.DAL.DataAccess.Contracts;
 using OpenQbit.Institute.Common.Utils.Log;
-using OpenQbit.Institute.BLL.Service.Contracts;
+using OpenQbit.Institute.BLL.Service1.Contracts;
 using OpenQbit.Institute.BLL.InstituteService1;
 
 using Microsoft.Practices.Unity;

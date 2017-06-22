@@ -18,6 +18,12 @@ namespace OpenQbit.Institute.Test.BLL
 
         public void AddInstitute()
         {
+          //  Institute i =new Institute
+          //{
+          //  };
+
+
+
             //TemplateManager templateManager = new TemplateManager();
 
             //templateManager.AddTemplateDetail("abc", "", "", "");

@@ -10,7 +10,7 @@ using OpenQbit.Institute.Common.Utils.Log;
 
 using Microsoft.Practices.Unity;
 
-using OpenQbit.Institute.BLL.Service.Contracts;
+using OpenQbit.Institute.BLL.Service1.Contracts;
 
 namespace OpenQbit.Institute.BLL.InstituteService1
 {

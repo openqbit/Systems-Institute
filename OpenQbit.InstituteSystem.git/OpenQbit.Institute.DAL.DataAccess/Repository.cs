@@ -38,10 +38,16 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 return false;
             }
         }
+       
+
+        public T FindById<T>(int id) where T : class
+        {
+            return _db.Set<T>().Find(id);
+        }
 
         public T Find<T>(Expression<Func<T, bool>> predicate) where T : class
         {
-            return _db.Set<T>().FirstOrDefault<T>(predicate);
+            return _db.Set<T>().Where(predicate).FirstOrDefault();
         }
 
         public List<T> FindList<T>(Expression<Func<T, bool>> predicate) where T : class
@@ -81,5 +87,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 return false;
             }
         }
+
+       
     }
 }

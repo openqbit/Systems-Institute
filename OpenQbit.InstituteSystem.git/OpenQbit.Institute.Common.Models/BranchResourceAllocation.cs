@@ -15,6 +15,7 @@ namespace OpenQbit.Institute.Common.Models
         public  int ResourceId { get; set; }
 
         public virtual Branch Branch { get; set; }
+
         public virtual Resource Resource { get; set; }
 
     }

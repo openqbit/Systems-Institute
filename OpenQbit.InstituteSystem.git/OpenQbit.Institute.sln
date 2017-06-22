@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQnit.Institute.Test.Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Test.DAL", "OpenQbit.Institute.Test.DAL\OpenQbit.Institute.Test.DAL.csproj", "{A3173E0B-7A99-4CEA-8601-0E98F82A6175}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F8030A5C-E7CC-407E-B706-5682B8F0CCEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{A3173E0B-7A99-4CEA-8601-0E98F82A6175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3173E0B-7A99-4CEA-8601-0E98F82A6175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3173E0B-7A99-4CEA-8601-0E98F82A6175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8030A5C-E7CC-407E-B706-5682B8F0CCEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8030A5C-E7CC-407E-B706-5682B8F0CCEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8030A5C-E7CC-407E-B706-5682B8F0CCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8030A5C-E7CC-407E-B706-5682B8F0CCEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,5 +112,6 @@ Global
 		{8BFDC1D3-061E-4DB2-AFEB-B00C5A268AC9} = {D48A9733-5CF6-4C20-AFD8-7F4EB9FAFBDC}
 		{C0BA7A7A-BB7D-4F52-A419-A639A52369D8} = {D48A9733-5CF6-4C20-AFD8-7F4EB9FAFBDC}
 		{A3173E0B-7A99-4CEA-8601-0E98F82A6175} = {D48A9733-5CF6-4C20-AFD8-7F4EB9FAFBDC}
+		{F8030A5C-E7CC-407E-B706-5682B8F0CCEA} = {D48A9733-5CF6-4C20-AFD8-7F4EB9FAFBDC}
 	EndGlobalSection
 EndGlobal

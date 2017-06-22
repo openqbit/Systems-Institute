@@ -68,13 +68,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="InstituteDbContext.cs" />
-    <Compile Include="Migrations\201706070900445_DBInit.cs" />
-    <Compile Include="Migrations\201706070900445_DBInit.Designer.cs">
-      <DependentUpon>201706070900445_DBInit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706070656241_DBInt2017-06-07modifymodels.cs" />
-    <Compile Include="Migrations\201706070656241_DBInt2017-06-07modifymodels.Designer.cs">
-      <DependentUpon>201706070656241_DBInt2017-06-07modifymodels.cs</DependentUpon>
+    <Compile Include="Migrations\201706220512456_DbInit.cs" />
+    <Compile Include="Migrations\201706220512456_DbInit.Designer.cs">
+      <DependentUpon>201706220512456_DbInit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,11 +91,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706070900445_DBInit.resx">
-      <DependentUpon>201706070900445_DBInit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706070656241_DBInt2017-06-07modifymodels.resx">
-      <DependentUpon>201706070656241_DBInt2017-06-07modifymodels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706220512456_DbInit.resx">
+      <DependentUpon>201706220512456_DbInit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

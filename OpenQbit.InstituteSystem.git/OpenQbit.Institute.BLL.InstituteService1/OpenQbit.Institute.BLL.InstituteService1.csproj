@@ -82,6 +82,10 @@
       <Project>{2ebf39a5-3a4e-4333-a1d1-50c3300d8ea6}</Project>
       <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.Test.DAL\OpenQbit.Institute.Test.DAL.csproj">
+      <Project>{a3173e0b-7a99-4cea-8601-0e98f82a6175}</Project>
+      <Name>OpenQbit.Institute.Test.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
