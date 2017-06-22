@@ -1,0 +1,14 @@
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\OpenQbit.Institute.Common.Utils.Log.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\OpenQbit.Institute.Common.Utils.Log.pdb
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\obj\Debug\OpenQbit.Institute.Common.Utils.Log.dll
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\obj\Debug\OpenQbit.Institute.Common.Utils.Log.pdb
+C:\Users\STARFLOWER\Source\Repos\Systems-Institute\OpenQbit.InstituteSystem.git\OpenQbit.Institute.Common.Utils.Log\obj\Debug\OpenQbit.Institute.Common.Utils.Logs.csprojResolveAssemblyReference.cache
