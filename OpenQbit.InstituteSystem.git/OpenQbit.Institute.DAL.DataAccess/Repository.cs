@@ -7,12 +7,22 @@ using System.Threading.Tasks;
 using OpenQbit.Institute.DAL.DataAccess.Contracts;
 using System.Data.Entity;
 
+using OpenQbit.Institute.Common.Utils.Log;
+using Microsoft.Practices.Unity;
+
 namespace OpenQbit.Institute.DAL.DataAccess
 {
     public class Repository : IRepository
     {
         private InstituteDbContext _db = new InstituteDbContext();
+        private ILogger _logger;
         //to get connection with InstituteDbContext
+
+        [InjectionConstructor]
+        public Repository(ILogger logger)
+        {
+            _logger = logger;
+        }
 
         public bool Create<T>(T obj) where T : class
         {

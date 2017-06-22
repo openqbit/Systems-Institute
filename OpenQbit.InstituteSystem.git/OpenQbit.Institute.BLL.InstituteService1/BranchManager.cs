@@ -4,15 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using OpenQbit.Institute.DAL.DataAccess;
+using OpenQbit.Institute.DAL.DataAccess.Contracts;
 using OpenQbit.Institute.Common.Models;
+
+
+using OpenQbit.Institute.Common.Utils.Log;
+using Microsoft.Practices.Unity;
+
+using OpenQbit.Institute.BLL.Service.Contracts;
 
 namespace OpenQbit.Institute.BLL.InstituteService1
 {
-    class BranchManager
+    class BranchManager : IBranchManager
     {
-        private Repository _db = new Repository();
+        private IRepository _db;
 
+
+        public BranchManager(IRepository repository, ILogger logger)
+        {
+            _db = repository;
+        }
 
         public bool CreateBranch(string BranchName, string Address, int TelNo, int InstituteId)
         {
@@ -33,6 +44,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         public Branch FindDocument(int BranchId)
         {
             Branch newBranch = new Branch();
+            //return _db.FindList<Branch>(BranchId);
             return _db.FindList<Branch>(BranchId);
         }
     }

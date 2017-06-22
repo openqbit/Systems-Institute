@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Presenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.BLL.Service.Contracts", "OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj", "{3BA17049-DB1B-4A3E-B744-40926914D268}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Presentation.Web", "OpenQbit.Institute.Presentation.Web\OpenQbit.Institute.Presentation.Web.csproj", "{171926D0-7B31-4301-8FF2-C388B6F38FC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{3BA17049-DB1B-4A3E-B744-40926914D268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BA17049-DB1B-4A3E-B744-40926914D268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171926D0-7B31-4301-8FF2-C388B6F38FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171926D0-7B31-4301-8FF2-C388B6F38FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171926D0-7B31-4301-8FF2-C388B6F38FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171926D0-7B31-4301-8FF2-C388B6F38FC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{2EBF39A5-3A4E-4333-A1D1-50C3300D8EA6} = {59A9FB34-BED0-41DA-B8AF-6062B7F36682}
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB} = {24AD5689-7077-40FE-8273-A7D3BB462E73}
 		{3BA17049-DB1B-4A3E-B744-40926914D268} = {7CD2B725-9992-450A-A91E-3EE881BE303F}
+		{171926D0-7B31-4301-8FF2-C388B6F38FC4} = {24AD5689-7077-40FE-8273-A7D3BB462E73}
 	EndGlobalSection
 EndGlobal

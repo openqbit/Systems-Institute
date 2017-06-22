@@ -40,12 +40,13 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             foreach ( var resoude in resorceList)
             {
                 BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation { BranchId = BranchId, ResourceId = resoude };
-                //_db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
-                bracnhList.Add(newBranchResourceAllocation);
+                _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
+                //bracnhList.Add(newBranchResourceAllocation);
             }
 
 
-            return _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
+            //return _db.Create<BranchResourceAllocation>(List<newBranchResourceAllocation branch>);
+            return _db.Save();
             //return _db.Create<BranchResourceAllocation>()
         }
 
@@ -54,10 +55,22 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
             return _db.Delete<BranchResourceAllocation>(newBranchResourceAllocation);
         }
-        public Branch FindBranchResourceAllocation(int BranchResourceAllocationId)
+
+        public BranchResourceAllocation FindBranchResourceAllocation(int BranchResourceAllocationId)
         {
             BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.FindList<BranchResourceAllocation>(BranchResourceAllocationId);
+            return _db.FindList<BranchResourceAllocation>(B => B.BranchResourceAllocationId == BranchResourceAllocationId).FirstOrDefault();
+        }
+        public List<BranchResourceAllocation> FindBranchResourceAllocationList(int BranchId)
+        {
+            BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
+            return _db.FindList<BranchResourceAllocation>( B => B.BranchId == BranchId);
+        }
+
+        public bool RecordBranchResourceAllocationManager(BranchResourceAllocation branchResourceAllocation)
+        {
+            _logger.LogError("");
+            return _db.Create<BranchResourceAllocation>(branchResourceAllocation);
         }
     }
 }
