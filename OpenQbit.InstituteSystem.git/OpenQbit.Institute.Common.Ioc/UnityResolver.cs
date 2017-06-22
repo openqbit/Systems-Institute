@@ -14,7 +14,7 @@ using Microsoft.Practices.Unity;
 namespace OpenQbit.Institute.Common.Ioc
 {
     public static class UnityResolver
-    {
+    { 
         private static readonly IUnityContainer Container = new UnityContainer();
 
         private static void Register()
