@@ -10,14 +10,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace OpenQbit.Institute.DAL.DataAccess
 {
-    //class InstituteDbContext : DbContext
-    //{
-    //    public InstituteDbContext() : base("Institute")
-    //    {
-
-    //    }
-    //}
-
+  
 
     public class InstituteDbContext : DbContext
     {

@@ -14,6 +14,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
         private InstituteDbContext _db = new InstituteDbContext();
         //to get connection with InstituteDbContext
 
+
         public bool Create<T>(T obj) where T : class
         {
             try
