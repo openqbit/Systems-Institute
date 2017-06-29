@@ -30,6 +30,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,17 +61,34 @@
     <Compile Include="BranchManager.cs" />
     <Compile Include="BranchResourceAllocationManager.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="EmployeeManager.cs" />
+    <Compile Include="InstituteManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj">
+      <Project>{05b6f3a9-b0bc-4ed8-b6be-41b8e033c601}</Project>
+      <Name>OpenQbit.Institute.BLL.Service.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.Common.Models\OpenQbit.Institute.Common.Models.csproj">
       <Project>{f881013f-cfc1-496c-b575-83c9a7886d30}</Project>
       <Name>OpenQbit.Institute.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.Common.Utils.Logs\OpenQbit.Institute.Common.Utils.Logs.csproj">
+      <Project>{abe08910-3b5b-4ada-8cbb-b8a3fe517221}</Project>
+      <Name>OpenQbit.Institute.Common.Utils.Logs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess.Contracts\OpenQbit.Institute.DAL.DataAccess.Contracts.csproj">
+      <Project>{1e8e9c81-03f2-47d4-b424-6f1f5a7e77e5}</Project>
+      <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess\OpenQbit.Institute.DAL.DataAccess.csproj">
       <Project>{01ba2ec5-d264-4275-9808-a8c84992ba14}</Project>
       <Name>OpenQbit.Institute.DAL.DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
