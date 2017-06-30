@@ -72,9 +72,9 @@
     <Compile Include="BranchManagerTest.cs" />
     <Compile Include="EmployeeManagerTest.cs" />
     <Compile Include="InstituteManagerTest.cs" />
-    <Compile Include="SamppleTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

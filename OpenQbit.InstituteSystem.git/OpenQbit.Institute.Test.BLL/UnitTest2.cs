@@ -6,12 +6,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace OpenQbit.Institute.Test.BLL
 {
     /// <summary>
-    /// Summary description for SamppleTest
+    /// Summary description for UnitTest2
     /// </summary>
     [TestClass]
-    public class SamppleTest
+    public class UnitTest2
     {
-        public SamppleTest()
+        public UnitTest2()
         {
             //
             // TODO: Add constructor logic here
