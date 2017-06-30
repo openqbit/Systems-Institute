@@ -37,7 +37,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
 
             List<BranchResourceAllocation> bracnhList = new List<BranchResourceAllocation>();
 
-            foreach ( var resoude in resorceList)
+            foreach (var resoude in resorceList)
             {
                 BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation { BranchId = BranchId, ResourceId = resoude };
                 _db.Create<BranchResourceAllocation>(newBranchResourceAllocation);
@@ -64,7 +64,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         public List<BranchResourceAllocation> FindBranchResourceAllocationList(int BranchId)
         {
             BranchResourceAllocation newBranchResourceAllocation = new BranchResourceAllocation();
-            return _db.FindList<BranchResourceAllocation>( B => B.BranchId == BranchId);
+            return _db.FindList<BranchResourceAllocation>(B => B.BranchId == BranchId);
         }
 
         public bool RecordBranchResourceAllocationManager(BranchResourceAllocation branchResourceAllocation)

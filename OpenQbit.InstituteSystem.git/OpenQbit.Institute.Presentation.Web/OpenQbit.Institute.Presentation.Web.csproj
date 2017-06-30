@@ -174,10 +174,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Batch\BatchItem.cs" />
     <Compile Include="Models\Branch\BranchItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Institute\InsitituteItem.cs" />
+    <Compile Include="Models\Lecture\LectureItem.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Parent\ParentItem.cs" />
     <Compile Include="Models\Student\StudentItems.cs" />
+    <Compile Include="Models\Subject\SubjectItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

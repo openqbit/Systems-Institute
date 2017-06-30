@@ -47,5 +47,10 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             //return _db.FindList<Branch>(BranchId);
             return _db.FindList<Branch>(BranchId);
         }
+
+        public bool RecordBranchManager(Branch branch)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

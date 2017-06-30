@@ -10,7 +10,7 @@ namespace OpenQbit.Institute.Presentation.Web.Models.Student
     {
         public int ID { get; set; }
 
-        [Display(Name = "Batch Name")]
+        [Display(Name = "Student ID")]
         public int StudentId { get; set; }
 
         [Display(Name = "Name")]
@@ -20,10 +20,10 @@ namespace OpenQbit.Institute.Presentation.Web.Models.Student
         public double Address { get; set; }
 
         [Display(Name = "Email")]
-        public int Email { get; set; }
+        public string Email { get; set; }
 
-        [Display(Name = "TelNo")]
-        public int TelNo { get; set; }
+        [Display(Name = "Telephone No")]
+        public int TelephoneNo { get; set; }
 
         [Display(Name = "Parent Name")]
         public string ParentInformationId { get; set; }

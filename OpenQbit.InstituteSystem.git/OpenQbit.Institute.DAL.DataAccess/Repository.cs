@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 using OpenQbit.Institute.Common.Utils.Log;
 using Microsoft.Practices.Unity;
+using OpenQbit.Institute.Common.Models;
 
 namespace OpenQbit.Institute.DAL.DataAccess
 {
@@ -34,6 +35,16 @@ namespace OpenQbit.Institute.DAL.DataAccess
             catch (Exception edb) {
                 return false;
             }
+        }
+
+        public bool Create<T>(object newBranchResourceAllocation, object branch)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BatchEnrolment FindList<T>(int batchEnrolmentId)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Delete<T>(T obj) where T : class
