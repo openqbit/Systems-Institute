@@ -40,9 +40,9 @@ namespace OpenQbit.Institute.Test.DAL
             bool ans = res.Create<Batch>(batch);
             res.Save();
 
-            Batch batch1 = res.Find<Batch>(B => B.BatchName == "37Batch");
+            Batch batch1 = res.Find<Batch>(B => B.BatchName == batch.BatchName);
 
-            string expected = "37Batch";
+            string expected = batch.BatchName;
             string actual = batch1.BatchName;
 
             Assert.AreEqual(expected, actual);

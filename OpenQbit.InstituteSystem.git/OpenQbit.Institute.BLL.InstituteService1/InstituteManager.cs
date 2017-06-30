@@ -28,49 +28,50 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             _db = repository;
         }
 
-        public bool Create(Branch instituteo)
+        public bool Create(Common.Models.Institute institute)
         {
-            throw new NotImplementedException();
+            return _db.Create<Common.Models.Institute>(institute);
         }
 
-        public bool Delete(Branch branch)
+        public bool Delete(Common.Models.Institute institute)
         {
-            throw new NotImplementedException();
+            return _db.Delete<Common.Models.Institute>(institute);
         }
 
-        public bool DeleteById(int branchId)
+        public bool DeleteById(int  instituteId)
         {
-            throw new NotImplementedException();
+            Common.Models.Institute institute = _db.Find<Common.Models.Institute>(I => I.InstituteId == instituteId);
+            return _db.Delete<Common.Models.Institute>(institute);
         }
 
-        public Branch Find(Expression<Func<Branch, bool>> predicate)
+        public Common.Models.Institute Find(Expression<Func<Common.Models.Institute, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _db.Find<Common.Models.Institute>(predicate);
         }
 
-        public Branch FindById(int branchId)
+        public Common.Models.Institute FindById(int instituteId)
         {
-            throw new NotImplementedException();
+            return _db.Find<Common.Models.Institute>(I => I.InstituteId == instituteId);
         }
 
-        public List<Branch> FindList(Expression<Func<Branch, bool>> predicate)
+        public List<Common.Models.Institute> FindList(Expression<Func<Common.Models.Institute, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _db.FindList<Common.Models.Institute>(predicate);
         }
 
-        public List<Branch> GetAll()
+        public List<Common.Models.Institute> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.GetAll<Common.Models.Institute>();
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            return _db.Save();
         }
 
-        public bool Update(Branch branch)
+        public bool Update(Common.Models.Institute institute)
         {
-            throw new NotImplementedException();
+            return _db.Update<Common.Models.Institute>(institute);
         }
     }
 }

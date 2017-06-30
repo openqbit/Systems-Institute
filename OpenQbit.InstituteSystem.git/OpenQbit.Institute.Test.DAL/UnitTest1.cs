@@ -7,8 +7,8 @@ namespace OpenQbit.Institute.Test.DAL
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
-        {
+        public void AddBatch() {
+
         }
     }
 }

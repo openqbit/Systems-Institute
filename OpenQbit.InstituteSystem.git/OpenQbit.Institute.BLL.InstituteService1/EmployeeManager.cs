@@ -30,7 +30,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
 
         public bool Create<T>(T obj) where T : class
         {
-            //Some Logics If Applicable
+          
             return _db.Create(obj);
         }
 
