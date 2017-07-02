@@ -81,6 +81,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Institute.BLL.InstituteService1\OpenQbit.Institute.BLL.InstituteService1.csproj">
+      <Project>{516c1399-eced-475c-b6a4-3cb88966000d}</Project>
+      <Name>OpenQbit.Institute.BLL.InstituteService1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj">
       <Project>{05b6f3a9-b0bc-4ed8-b6be-41b8e033c601}</Project>
       <Name>OpenQbit.Institute.BLL.Service.Contracts</Name>

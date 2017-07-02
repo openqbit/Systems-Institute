@@ -268,11 +268,11 @@
       <Name>OpenQbit.Institute.BLL.InstituteService1</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj">
-      <Project>{3ba17049-db1b-4a3e-b744-40926914d268}</Project>
+      <Project>{05b6f3a9-b0bc-4ed8-b6be-41b8e033c601}</Project>
       <Name>OpenQbit.Institute.BLL.Service.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenQbit.Institute.Common.Ioc\OpenQbit.Institute.Common.Ioc.csproj">
-      <Project>{2f09db60-b93f-4bb0-b43e-fbff2cb90e87}</Project>
+      <Project>{47e81b9c-8235-4afd-9aa6-3ac756d98441}</Project>
       <Name>OpenQbit.Institute.Common.Ioc</Name>
     </ProjectReference>
   </ItemGroup>
