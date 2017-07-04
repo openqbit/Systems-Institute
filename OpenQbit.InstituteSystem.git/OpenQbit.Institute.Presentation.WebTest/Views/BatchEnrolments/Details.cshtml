@@ -1,0 +1,43 @@
+﻿@model OpenQbit.Institute.Common.Models.BatchEnrolment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BatchEnrolment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Batch.BatchName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Batch.BatchName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeDuration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BatchEnrolmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
