@@ -10,14 +10,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace OpenQbit.Institute.DAL.DataAccess
 {
-    //class InstituteDbContext : DbContext
-    //{
-    //    public InstituteDbContext() : base("Institute")
-    //    {
-
-    //    }
-    //}
-
+  
 
     public class InstituteDbContext : DbContext
     {
@@ -47,5 +40,6 @@ namespace OpenQbit.Institute.DAL.DataAccess
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
+        public System.Data.Entity.DbSet<OpenQbit.Institute.Common.Models.Resource> Resources { get; set; }
     }
 }

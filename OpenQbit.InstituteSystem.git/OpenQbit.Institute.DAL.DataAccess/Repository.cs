@@ -14,6 +14,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
         private InstituteDbContext _db = new InstituteDbContext();
         //to get connection with InstituteDbContext
 
+
         public bool Create<T>(T obj) where T : class
         {
             try
@@ -21,9 +22,15 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 _db.Set<T>().Add(obj);
                 return true;
             }
-            catch (Exception edb) {
+            catch (Exception edb)
+            {
                 return false;
             }
+        }
+
+        public List<T> GetAll<T>() where T : class
+        {
+            return _db.Set<T>().ToList();
         }
 
         public bool Delete<T>(T obj) where T : class
@@ -39,9 +46,15 @@ namespace OpenQbit.Institute.DAL.DataAccess
             }
         }
 
+
+        public T FindById<T>(int id) where T : class
+        {
+            return _db.Set<T>().Find(id);
+        }
+
         public T Find<T>(Expression<Func<T, bool>> predicate) where T : class
         {
-            return _db.Set<T>().FirstOrDefault<T>(predicate);
+            return _db.Set<T>().Where(predicate).FirstOrDefault();
         }
 
         public List<T> FindList<T>(Expression<Func<T, bool>> predicate) where T : class
@@ -49,10 +62,6 @@ namespace OpenQbit.Institute.DAL.DataAccess
             return _db.Set<T>().Where<T>(predicate).ToList();
         }
 
-        public List<T> GetAll<T>() where T : class
-        {
-            return _db.Set<T>().ToList();
-        }
 
         public bool Save()
         {
@@ -81,5 +90,7 @@ namespace OpenQbit.Institute.DAL.DataAccess
                 return false;
             }
         }
+
+
     }
 }

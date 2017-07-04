@@ -3,7 +3,7 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DBInit : DbMigration
+    public partial class dbinit_v1 : DbMigration
     {
         public override void Up()
         {
@@ -70,10 +70,13 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
                         Nic = c.String(),
                         TelNo = c.Int(nullable: false),
                         ParentInformationId = c.Int(nullable: false),
+                        PersonId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.StudentId)
                 .ForeignKey("dbo.ParentInformation", t => t.ParentInformationId, cascadeDelete: true)
-                .Index(t => t.ParentInformationId);
+                .ForeignKey("dbo.Person", t => t.PersonId, cascadeDelete: true)
+                .Index(t => t.ParentInformationId)
+                .Index(t => t.PersonId);
             
             CreateTable(
                 "dbo.ParentInformation",
@@ -125,7 +128,11 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
                         BranchId = c.Int(nullable: false),
                         ResourceId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.BranchResourceAllocationId);
+                .PrimaryKey(t => t.BranchResourceAllocationId)
+                .ForeignKey("dbo.Branch", t => t.BranchId, cascadeDelete: true)
+                .ForeignKey("dbo.Resource", t => t.ResourceId, cascadeDelete: true)
+                .Index(t => t.BranchId)
+                .Index(t => t.ResourceId);
             
             CreateTable(
                 "dbo.Employee",
@@ -150,10 +157,13 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
                         Address = c.String(),
                         Specify = c.String(),
                         SubjectID = c.Int(nullable: false),
+                        EmployeeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.LectureID)
+                .ForeignKey("dbo.Employee", t => t.EmployeeId, cascadeDelete: true)
                 .ForeignKey("dbo.Subject", t => t.SubjectID, cascadeDelete: true)
-                .Index(t => t.SubjectID);
+                .Index(t => t.SubjectID)
+                .Index(t => t.EmployeeId);
             
             CreateTable(
                 "dbo.Subject",
@@ -173,8 +183,11 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
                         Address = c.String(),
                         Telephone = c.Int(nullable: false),
                         Category = c.String(),
+                        EmployeeId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.StaffID);
+                .PrimaryKey(t => t.StaffID)
+                .ForeignKey("dbo.Employee", t => t.EmployeeId, cascadeDelete: true)
+                .Index(t => t.EmployeeId);
             
             CreateTable(
                 "dbo.SubjectEnrolment",
@@ -196,9 +209,14 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
         {
             DropForeignKey("dbo.SubjectEnrolment", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.SubjectEnrolment", "StudentId", "dbo.Student");
+            DropForeignKey("dbo.Staff", "EmployeeId", "dbo.Employee");
             DropForeignKey("dbo.Lecture", "SubjectID", "dbo.Subject");
+            DropForeignKey("dbo.Lecture", "EmployeeId", "dbo.Employee");
             DropForeignKey("dbo.Employee", "PersonID", "dbo.Person");
+            DropForeignKey("dbo.BranchResourceAllocation", "ResourceId", "dbo.Resource");
+            DropForeignKey("dbo.BranchResourceAllocation", "BranchId", "dbo.Branch");
             DropForeignKey("dbo.BatchEnrolment", "StudentId", "dbo.Student");
+            DropForeignKey("dbo.Student", "PersonId", "dbo.Person");
             DropForeignKey("dbo.Student", "ParentInformationId", "dbo.ParentInformation");
             DropForeignKey("dbo.ParentInformation", "Mother_PersonId", "dbo.Person");
             DropForeignKey("dbo.ParentInformation", "Father_PersonId", "dbo.Person");
@@ -208,11 +226,16 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
             DropForeignKey("dbo.Branch", "InstituteId", "dbo.Institute");
             DropIndex("dbo.SubjectEnrolment", new[] { "StudentId" });
             DropIndex("dbo.SubjectEnrolment", new[] { "SubjectId" });
+            DropIndex("dbo.Staff", new[] { "EmployeeId" });
+            DropIndex("dbo.Lecture", new[] { "EmployeeId" });
             DropIndex("dbo.Lecture", new[] { "SubjectID" });
             DropIndex("dbo.Employee", new[] { "PersonID" });
+            DropIndex("dbo.BranchResourceAllocation", new[] { "ResourceId" });
+            DropIndex("dbo.BranchResourceAllocation", new[] { "BranchId" });
             DropIndex("dbo.Person", new[] { "ResourceID" });
             DropIndex("dbo.ParentInformation", new[] { "Mother_PersonId" });
             DropIndex("dbo.ParentInformation", new[] { "Father_PersonId" });
+            DropIndex("dbo.Student", new[] { "PersonId" });
             DropIndex("dbo.Student", new[] { "ParentInformationId" });
             DropIndex("dbo.BatchEnrolment", new[] { "StudentId" });
             DropIndex("dbo.BatchEnrolment", new[] { "BatchId" });

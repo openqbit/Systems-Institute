@@ -7,13 +7,13 @@ namespace OpenQbit.Institute.DAL.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class DBInt20170607modifymodels : IMigrationMetadata
+    public sealed partial class dbinit_v1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DBInt20170607modifymodels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dbinit_v1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706070656241_DBInt2017-06-07modifymodels"; }
+            get { return "201707011346575_dbinit_v1"; }
         }
         
         string IMigrationMetadata.Source
