@@ -27,7 +27,7 @@ namespace OpenQbit.Institute.Test.BLL
             };
 
             //use unity UnityResolver 
-
+            UnityResolver.Register();
             IBatchManager BranchManager = UnityResolver.Resolve<IBatchManager>();
 
             bool ans = BranchManager.Create(batch);
