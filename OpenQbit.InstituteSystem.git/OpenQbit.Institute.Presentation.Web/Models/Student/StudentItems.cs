@@ -10,20 +10,20 @@ namespace OpenQbit.Institute.Presentation.Web.Models.Student
     {
         public int ID { get; set; }
 
-        [Display(Name = "Batch Name")]
+        [Display(Name = "Branch Name")]
         public int StudentId { get; set; }
 
-        [Display(Name = "Name")]
+        [Display(Name = "Student Name")]
         public string StudentName { get; set; }
 
         [Display(Name = "Address")]
-        public double Address { get; set; }
+        public string Address { get; set; }
 
         [Display(Name = "Email")]
-        public int Email { get; set; }
+        public string Email { get; set; }
 
-        [Display(Name = "TelNo")]
-        public int TelNo { get; set; }
+        [Display(Name = "Telepone No")]
+        public int TelephoneNo { get; set; }
 
         [Display(Name = "Parent Name")]
         public string ParentInformationId { get; set; }

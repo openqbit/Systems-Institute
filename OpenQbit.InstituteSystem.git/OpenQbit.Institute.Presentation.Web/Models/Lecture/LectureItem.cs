@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace OpenQbit.Institute.Presentation.Web.Models.Branch
+namespace OpenQbit.Institute.Presentation.Web.Models.Lecture
 {
-    public class BranchItem
+    public class LectureItem
     {
         public int ID { get; set; }
-        
-        [Display(Name = "Branch Name")]
-        public string BranchName { get; set; }
+
+        [Display(Name = "Lecture Name")]
+        public string LectureName { get; set; }
 
         [Display(Name = "Address")]
         public string Address { get; set; }
@@ -22,7 +22,5 @@ namespace OpenQbit.Institute.Presentation.Web.Models.Branch
         [Display(Name = "Telepone No")]
         public int TelephoneNo { get; set; }
 
-        [Display(Name = "Parent Name")]
-        public string ParentInformationID { get; set; }
     }
 }
