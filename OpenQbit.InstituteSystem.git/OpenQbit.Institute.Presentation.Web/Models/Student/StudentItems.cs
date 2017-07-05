@@ -17,7 +17,7 @@ namespace OpenQbit.Institute.Presentation.Web.Models.Student
         public string StudentName { get; set; }
 
         [Display(Name = "Address")]
-        public double Address { get; set; }
+        public string Address { get; set; }
 
         [Display(Name = "Email")]
         public int Email { get; set; }
