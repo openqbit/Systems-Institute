@@ -22,6 +22,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Create()
         {
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
             List<Branch> list = new List<Branch>();
@@ -43,7 +44,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Delete()
         {
-
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
             Common.Models.Institute institute = InstituteManager.Find(I => I.InstituteName == "IJSEPanadura");
 
@@ -61,6 +62,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void GetAll()
         {
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
             List<Common.Models.Institute> list = InstituteManager.GetAll();
@@ -75,7 +77,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void FindById()
         {
-
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
 
@@ -91,6 +93,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Update()
         {
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
             Common.Models.Institute institute = InstituteManager.FindById(91);
@@ -112,7 +115,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Find()
         {
-
+            UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
 

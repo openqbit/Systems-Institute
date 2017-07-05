@@ -18,7 +18,7 @@ namespace OpenQbit.Institute.Common.Ioc
     {
         private static readonly IUnityContainer Container = new UnityContainer();
 
-        private static void Register()
+        public static void Register()
         {
             Container.RegisterType<IBranchResourceAllocationManager, BranchResourceAllocationManager>();
             Container.RegisterType<IBatchManager, BatchManager>();
