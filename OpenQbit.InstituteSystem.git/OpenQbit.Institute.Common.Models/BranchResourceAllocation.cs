@@ -10,9 +10,13 @@ namespace OpenQbit.Institute.Common.Models
     {
 
         public int BranchResourceAllocationId { get; set; }
-        public virtual int BranchId { get; set; }
+        public  int BranchId { get; set; }
 
-        public virtual int ResourceId { get; set; }
+        public  int ResourceId { get; set; }
+
+        public virtual Branch Branch { get; set; }
+
+        public virtual Resource Resource { get; set; }
 
     }
 
