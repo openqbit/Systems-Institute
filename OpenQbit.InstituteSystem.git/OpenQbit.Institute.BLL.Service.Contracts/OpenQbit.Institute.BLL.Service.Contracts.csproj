@@ -47,6 +47,7 @@
     <Compile Include="IBranchResourceAllocationManager.cs" />
     <Compile Include="IEmployeeManager.cs" />
     <Compile Include="IInstituteManager.cs" />
+    <Compile Include="IStudentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
