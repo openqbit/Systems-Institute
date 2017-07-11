@@ -20,6 +20,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Create()
         {
+            UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
             Batch batch = new Batch
             {
@@ -46,7 +47,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Delete()
         {
-
+            UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
             Batch batch = BatchManager.Find(B => B.BatchId == 115);
 
@@ -64,6 +65,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void GetAll()
         {
+            UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
             List<Batch> list = BatchManager.GetAll();
@@ -78,6 +80,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void FindById()
         {
+            UnityResolver.Register();
 
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
@@ -94,6 +97,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Update()
         {
+            UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
             Batch batch = BatchManager.FindById(91);
@@ -115,7 +119,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Find()
         {
-
+            UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
 

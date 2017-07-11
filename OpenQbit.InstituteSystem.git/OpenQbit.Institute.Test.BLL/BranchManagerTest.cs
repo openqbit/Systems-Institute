@@ -30,6 +30,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Create()
         {
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
             Branch branch = new Branch
@@ -55,7 +56,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Delete()
         {
-
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
             Branch branch = BranchManager.Find(B => B.BranchId == 115);
 
@@ -73,6 +74,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void GetAll()
         {
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
             List<Branch> list = BranchManager.GetAll();
@@ -87,7 +89,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void FindById()
         {
-
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
@@ -103,6 +105,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Update()
         {
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
             Branch branch = BranchManager.FindById(91);
@@ -124,7 +127,7 @@ namespace OpenQbit.Institute.Test.BLL
         [TestMethod]
         public void Find()
         {
-
+            UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
