@@ -42,6 +42,10 @@ namespace OpenQbit.Institute.DAL.DataAccess
 
         public System.Data.Entity.DbSet<OpenQbit.Institute.Common.Models.Resource> Resources { get; set; }
 
+        //public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.Branch.BranchItem> BranchItems { get; set; }
+
+        // public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.Institute.InstituteItem> InstituteItems { get; set; }
+
         //public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.Staff.StaffItem> StaffItems { get; set; }
     }
 }

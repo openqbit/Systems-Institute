@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Presenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Test.BLL", "OpenQbit.Institute.Test.BLL\OpenQbit.Institute.Test.BLL.csproj", "{3CB04A3B-D55F-4484-A26E-00B042008120}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenQbit.Institute.Service.WebApi", "OpenQbit.Institute.Service.WebApi\OpenQbit.Institute.Service.WebApi.csproj", "{4BDF5005-4367-436B-B46B-4A0DBA23B4A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{3CB04A3B-D55F-4484-A26E-00B042008120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB04A3B-D55F-4484-A26E-00B042008120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB04A3B-D55F-4484-A26E-00B042008120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BDF5005-4367-436B-B46B-4A0DBA23B4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDF5005-4367-436B-B46B-4A0DBA23B4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDF5005-4367-436B-B46B-4A0DBA23B4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDF5005-4367-436B-B46B-4A0DBA23B4A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +119,6 @@ Global
 		{1FD0ABC3-831E-4B77-A261-AB2D5CDC1CBB} = {24AD5689-7077-40FE-8273-A7D3BB462E73}
 		{171926D0-7B31-4301-8FF2-C388B6F38FC4} = {24AD5689-7077-40FE-8273-A7D3BB462E73}
 		{3CB04A3B-D55F-4484-A26E-00B042008120} = {D48A9733-5CF6-4C20-AFD8-7F4EB9FAFBDC}
+		{4BDF5005-4367-436B-B46B-4A0DBA23B4A0} = {CB36622A-AAA0-47FE-AC65-F0677D29956A}
 	EndGlobalSection
 EndGlobal
