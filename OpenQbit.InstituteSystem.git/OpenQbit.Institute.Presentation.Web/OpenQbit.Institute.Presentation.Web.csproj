@@ -171,6 +171,8 @@
     <Compile Include="Controllers\BranchItemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -247,6 +249,16 @@
     <Content Include="Views\BranchItems\Details.cshtml" />
     <Content Include="Views\BranchItems\Edit.cshtml" />
     <Content Include="Views\BranchItems\Index.cshtml" />
+    <Content Include="Views\Subjects\Create.cshtml" />
+    <Content Include="Views\Subjects\Delete.cshtml" />
+    <Content Include="Views\Subjects\Details.cshtml" />
+    <Content Include="Views\Subjects\Edit.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
+    <Content Include="Views\People\Create.cshtml" />
+    <Content Include="Views\People\Delete.cshtml" />
+    <Content Include="Views\People\Details.cshtml" />
+    <Content Include="Views\People\Edit.cshtml" />
+    <Content Include="Views\People\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -258,6 +270,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenQbit.Institute.Common.Ioc\OpenQbit.Institute.Common.Ioc.csproj">
+      <Project>{47e81b9c-8235-4afd-9aa6-3ac756d98441}</Project>
+      <Name>OpenQbit.Institute.Common.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.Common.Models\OpenQbit.Institute.Common.Models.csproj">
+      <Project>{f881013f-cfc1-496c-b575-83c9a7886d30}</Project>
+      <Name>OpenQbit.Institute.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess.Contracts\OpenQbit.Institute.DAL.DataAccess.Contracts.csproj">
+      <Project>{1e8e9c81-03f2-47d4-b424-6f1f5a7e77e5}</Project>
+      <Name>OpenQbit.Institute.DAL.DataAccess.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenQbit.Institute.DAL.DataAccess\OpenQbit.Institute.DAL.DataAccess.csproj">
+      <Project>{01ba2ec5-d264-4275-9808-a8c84992ba14}</Project>
+      <Name>OpenQbit.Institute.DAL.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

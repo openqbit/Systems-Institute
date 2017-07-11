@@ -32,6 +32,8 @@ namespace OpenQbit.Institute.Presentation.Web.Models
 
         public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.Branch.BranchItem> BranchItems { get; set; }
 
+        //public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.SubjectItem> SubjectItems { get; set; }
+
         //public System.Data.Entity.DbSet<OpenQbit.Institute.Presentation.Web.Models.Person.PersonItem> PersonItems { get; set; }
     }
 }
