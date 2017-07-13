@@ -53,6 +53,8 @@ namespace OpenQbit.Institute.Presentation.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                //person.Resource = new Resource { GlobalID = 1231, ResourceType = "Lecture" };
+                //employee.Resource = new Resource 
                 db.Employee.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");

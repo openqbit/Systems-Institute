@@ -11,113 +11,107 @@ using OpenQbit.Institute.DAL.DataAccess;
 
 namespace OpenQbit.Institute.Presentation.Web.Controllers
 {
-    public class PeopleController : Controller
+    public class ParentInformationsController : Controller
     {
         private InstituteDbContext db = new InstituteDbContext();
 
-        // GET: People
+        // GET: ParentInformations
         public ActionResult Index()
         {
-            var person = db.Person.Include(p => p.Resource);
-            return View(person.ToList());
+            return View(db.ParentInformation.ToList());
         }
 
-        // GET: People/Details/5
+        // GET: ParentInformations/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Person person = db.Person.Find(id);
-            if (person == null)
+            ParentInformation parentInformation = db.ParentInformation.Find(id);
+            if (parentInformation == null)
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View(parentInformation);
         }
 
-        // GET: People/Create
+        // GET: ParentInformations/Create
         public ActionResult Create()
         {
-            ViewBag.ResourceID = new SelectList(db.Resources, "ResourceID", "ResourceType");
             return View();
         }
 
-        // POST: People/Create
+        // POST: ParentInformations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PersonId,PersonName,Address,Email,Tel,ResourceID")] Person person)
+        public ActionResult Create([Bind(Include = "ParentInformationId,MotherId,FatherId,PrimaryContactNumber")] ParentInformation parentInformation)
         {
             if (ModelState.IsValid)
             {
-                person.Resource = new Resource { GlobalID = 1231, ResourceType = "Lecture" };
-                db.Person.Add(person);
+                db.ParentInformation.Add(parentInformation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ResourceID = new SelectList(db.Resources, "ResourceID", "ResourceType", person.ResourceID);
-            return View(person);
+            return View(parentInformation);
         }
 
-        // GET: People/Edit/5
+        // GET: ParentInformations/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Person person = db.Person.Find(id);
-            if (person == null)
+            ParentInformation parentInformation = db.ParentInformation.Find(id);
+            if (parentInformation == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ResourceID = new SelectList(db.Resources, "ResourceID", "ResourceType", person.ResourceID);
-            return View(person);
+            return View(parentInformation);
         }
 
-        // POST: People/Edit/5
+        // POST: ParentInformations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PersonId,PersonName,Address,Email,Tel,ResourceID")] Person person)
+        public ActionResult Edit([Bind(Include = "ParentInformationId,MotherId,FatherId,PrimaryContactNumber")] ParentInformation parentInformation)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(person).State = EntityState.Modified;
+                db.Entry(parentInformation).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ResourceID = new SelectList(db.Resources, "ResourceID", "ResourceType", person.ResourceID);
-            return View(person);
+            return View(parentInformation);
         }
 
-        // GET: People/Delete/5
+        // GET: ParentInformations/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Person person = db.Person.Find(id);
-            if (person == null)
+            ParentInformation parentInformation = db.ParentInformation.Find(id);
+            if (parentInformation == null)
             {
                 return HttpNotFound();
             }
-            return View(person);
+            return View(parentInformation);
         }
 
-        // POST: People/Delete/5
+        // POST: ParentInformations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Person person = db.Person.Find(id);
-            db.Person.Remove(person);
+            ParentInformation parentInformation = db.ParentInformation.Find(id);
+            db.ParentInformation.Remove(parentInformation);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
