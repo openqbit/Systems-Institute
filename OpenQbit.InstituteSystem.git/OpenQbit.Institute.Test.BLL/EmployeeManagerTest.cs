@@ -14,7 +14,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1.Tests
         [TestMethod()]
         public void CreateTest()
         {
-            Assert.Fail();
+           
         }
     }
 }

@@ -71,7 +71,10 @@
     <Compile Include="EmployeeManager.cs" />
     <Compile Include="InstituteManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourseManager.cs" />
+    <Compile Include="StaffManager.cs" />
     <Compile Include="StudentManager.cs" />
+    <Compile Include="SubjectManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenQbit.Institute.BLL.Service.Contracts\OpenQbit.Institute.BLL.Service.Contracts.csproj">

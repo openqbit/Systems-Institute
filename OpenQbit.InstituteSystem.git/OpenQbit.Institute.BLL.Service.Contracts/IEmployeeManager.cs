@@ -9,19 +9,35 @@ namespace OpenQbit.Institute.BLL.Service1.Contracts
 {
    public interface IEmployeeManager
     {
-        bool Create(Employee employee);
-        Employee FindById(int employeeId);
-        bool DeleteById(int employeeId);
+        bool CreateEmployee(Employee employee);
+        Employee FindByEmployeeId(int employeeId);
+        bool DeleteByEmployeeId(int employeeId);
 
-        bool Delete(Employee employee);
+        bool DeleteEmployee(Employee employee);
 
-        Employee Find(Expression<Func<Employee, bool>> predicate);
+        Employee FindEmployee(Expression<Func<Employee, bool>> predicate);
 
-        List<Employee> FindList(Expression<Func<Employee, bool>> predicate);
+        List<Employee> FindEmployeeList(Expression<Func<Employee, bool>> predicate);
 
-        bool Update(Employee employee);
+        bool UpdateEmployee(Employee employee);
 
-        List<Employee> GetAll();
+        List<Employee> GetAllEmployee();
+
+        //////////////////////////////////////////////////////////////
+
+        bool CreateLecture(Lecture lecture);
+        Lecture FindByLectureId(int lectureId);
+        bool DeleteByLectureId(int lectureId);
+
+        bool DeleteLecture(Lecture lecture);
+
+        Lecture FindLecture(Expression<Func<Lecture, bool>> predicate);
+
+        List<Lecture> FindLectureList(Expression<Func<Lecture, bool>> predicate);
+
+        bool UpdateLecture(Lecture lecture);
+
+        List<Lecture> GetAllLecture();
 
         bool Save();
     }

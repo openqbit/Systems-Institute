@@ -58,7 +58,10 @@
     <Compile Include="IBranchManager.cs" />
     <Compile Include="IEmployeeManager.cs" />
     <Compile Include="IInstituteManager.cs" />
+    <Compile Include="IResourseManager.cs" />
+    <Compile Include="IStaffManager.cs" />
     <Compile Include="IStudentManager.cs" />
+    <Compile Include="ISubjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

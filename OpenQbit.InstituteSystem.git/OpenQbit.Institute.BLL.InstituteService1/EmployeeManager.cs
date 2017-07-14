@@ -27,53 +27,103 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             _db = repository;
         }
 
-        public bool Create(Employee employee)
+        public bool CreateEmployee(Employee employee)
         {
             //Some Logics If Applicable
             return _db.Create<Employee>(employee);
         }
 
-        public bool DeleteById(int employeeId)
+        public bool DeleteByEmployeeId(int employeeId)
         {
             Employee employee = _db.Find<Employee>(E => E.EmployeeID == employeeId);
             return _db.Delete<Employee>(employee);
 
         }
-        public bool Delete(Employee employee)
+        public bool DeleteEmployee(Employee employee)
         {
             //Some Logics If Applicable
             return _db.Delete<Employee>(employee);
         }
 
 
-        public Employee FindById(int employeeId)
+        public Employee FindByEmployeeId(int employeeId)
         {
             return _db.Find<Employee>(E => E.EmployeeID == employeeId);
         }
 
-        public Employee Find(Expression<Func<Employee, bool>> predicate)
+        public Employee FindEmployee(Expression<Func<Employee, bool>> predicate)
         {
             return _db.Find<Employee>(predicate);
         }
 
-        public List<Employee> FindList(Expression<Func<Employee, bool>> predicate)
+        public List<Employee> FindEmployeeList(Expression<Func<Employee, bool>> predicate)
         {
             return _db.FindList<Employee>(predicate);
         }
 
-        public bool Update(Employee employee)
+        public bool UpdateEmployee(Employee employee)
         {
             return _db.Update<Employee>(employee);
         }
 
-        public List<Employee> GetAll()
+        public List<Employee> GetAllEmployee()
         {
             return _db.GetAll<Employee>();
+        }
+
+
+        /// <summary>
+        /// Lecture
+        /// </summary>
+        public bool CreateLecture(Lecture lecture)
+        {
+            //Some Logics If Applicable
+            return _db.Create<Lecture>(lecture);
+        }
+
+        public bool DeleteByLectureId(int lectureId)
+        {
+            Lecture lecture = _db.Find<Lecture>(L => L.LectureID == lectureId);
+            return _db.Delete<Lecture>(lecture);
+
+        }
+        public bool DeleteLecture(Lecture lecture)
+        {
+            //Some Logics If Applicable
+            return _db.Delete<Lecture>(lecture);
+        }
+
+
+        public Lecture FindByLectureId(int lectureId)
+        {
+            return _db.Find<Lecture>(L => L.LectureID== lectureId);
+        }
+
+        public Lecture FindLecture(Expression<Func<Lecture, bool>> predicate)
+        {
+            return _db.Find<Lecture>(predicate);
+        }
+
+        public List<Lecture> FindLectureList(Expression<Func<Lecture, bool>> predicate)
+        {
+            return _db.FindList<Lecture>(predicate);
+        }
+
+        public bool UpdateLecture(Lecture lecture)
+        {
+            return _db.Update<Lecture>(lecture);
+        }
+
+        public List<Lecture> GetAllLecture()
+        {
+            return _db.GetAll<Lecture>();
         }
 
         public bool Save()
         {
             return _db.Save();
         }
+
+        
     }
 }
