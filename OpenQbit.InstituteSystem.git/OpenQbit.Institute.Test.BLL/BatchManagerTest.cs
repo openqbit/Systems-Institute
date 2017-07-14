@@ -32,10 +32,10 @@ namespace OpenQbit.Institute.Test.BLL
                     Institute = new Common.Models.Institute { InstituteName = "Test Institute" }
                 }
             };
-            bool ans = BatchManager.Create(batch);
+            bool ans = BatchManager.CreateBatch(batch);
             BatchManager.Save();
 
-            Batch batch1 = BatchManager.Find(B => B.BatchName == "37Batch");
+            Batch batch1 = BatchManager.FindBatch(B => B.BatchName == "37Batch");
 
             string expected = "37Batch";
             string actual = batch1.BatchName;
@@ -49,9 +49,9 @@ namespace OpenQbit.Institute.Test.BLL
         {
             UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
-            Batch batch = BatchManager.Find(B => B.BatchId == 115);
+            Batch batch = BatchManager.FindBatch(B => B.BatchId == 115);
 
-            bool ans = BatchManager.Delete(batch);
+            bool ans = BatchManager.DeleteBatch(batch);
             BatchManager.Save();
 
 
@@ -68,7 +68,7 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
-            List<Batch> list = BatchManager.GetAll();
+            List<Batch> list = BatchManager.GetAllBatch();
 
             foreach (Batch batch in list)
             {
@@ -85,7 +85,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
 
-            Batch batch1 = BatchManager.FindById(93);
+            Batch batch1 = BatchManager.FindByBatchId(93);
 
             int expected = 93;
             int actual = batch1.BatchId;
@@ -100,14 +100,14 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
-            Batch batch = BatchManager.FindById(91);
+            Batch batch = BatchManager.FindByBatchId(91);
 
             batch.BatchName = "38Batch" + DateTime.Now.ToString();
 
-            bool isUpdate = BatchManager.Update(batch);
+            bool isUpdate = BatchManager.UpdateBatch(batch);
             BatchManager.Save();
 
-            Batch batch1 = BatchManager.FindById(93);
+            Batch batch1 = BatchManager.FindByBatchId(93);
 
             string expected = "38Batch";
             string actual = batch1.BatchName;
@@ -123,7 +123,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
 
 
-            Batch batch1 = BatchManager.Find(B => B.BatchId == 92);
+            Batch batch1 = BatchManager.FindBatch(B => B.BatchId == 92);
 
             string expected = "38Batch";
             string actual = batch1.BatchName;

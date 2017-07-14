@@ -54,12 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="IBatchEnrolmentManager.cs" />
     <Compile Include="IBatchManager.cs" />
     <Compile Include="IBranchManager.cs" />
-    <Compile Include="IBranchResourceAllocationManager.cs" />
     <Compile Include="IEmployeeManager.cs" />
     <Compile Include="IInstituteManager.cs" />
+    <Compile Include="IStudentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

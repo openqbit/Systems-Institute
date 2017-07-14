@@ -11,19 +11,34 @@ namespace OpenQbit.Institute.BLL.Service1.Contracts
     {
 
 
-        bool Create(Branch branch);
-        Branch FindById(int branchId);
-        bool DeleteById(int branchId);
+        bool CreateBranch(Branch branch);
+        Branch FindByBranchId(int branchId);
+        bool DeleteByBranchId(int branchId);
 
-        bool Delete(Branch branch);
+        bool DeleteBranch(Branch branch);
 
-        Branch Find(Expression<Func<Branch, bool>> predicate);
+        Branch FindBranch(Expression<Func<Branch, bool>> predicate);
 
-        List<Branch> FindList(Expression<Func<Branch, bool>> predicate);
+        List<Branch> FindBranchList(Expression<Func<Branch, bool>> predicate);
 
-        bool Update(Branch branch);
+        bool UpdateBranch(Branch branch);
 
-        List<Branch> GetAll();
+        List<Branch> GetAllBranch();
+        //////////////////////////////////////////////
+
+        bool CreateBranchResourceAllocation(BranchResourceAllocation branchResourceAllocation);
+        BranchResourceAllocation FindByBranchResourceAllocationId(int branchResourceAllocationId);
+        bool DeleteByBranchResourceAllocationId(int branchResourceAllocationId);
+
+        bool DeleteBranchResourceAllocation(BranchResourceAllocation branchResourceAllocation);
+
+        BranchResourceAllocation FindBranchResourceAllocation(Expression<Func<BranchResourceAllocation, bool>> predicate);
+
+        List<BranchResourceAllocation> FindBranchResourceAllocationList(Expression<Func<BranchResourceAllocation, bool>> predicate);
+
+        bool UpdateBranchResourceAllocation(BranchResourceAllocation branchResourceAllocation);
+
+        List<BranchResourceAllocation> GetAllBranchResourceAllocation();
 
         bool Save();
     }

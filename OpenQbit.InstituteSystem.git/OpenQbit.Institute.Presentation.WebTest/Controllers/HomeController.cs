@@ -13,7 +13,7 @@ namespace OpenQbit.Institute.Presentation.WebTest.Controllers
     {
         public ActionResult Index()
         {
-            IBranchResourceAllocationManager BranchManager = UnityResolver.Resolve<IBranchResourceAllocationManager>();
+            //IBranchResourceAllocationManager BranchManager = UnityResolver.Resolve<IBranchResourceAllocationManager>();
            // IBranchResourceAllocationManager BranchManager = new BranchResourceAllocationManager();
             return View();
         }

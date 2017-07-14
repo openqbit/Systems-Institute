@@ -10,19 +10,36 @@ namespace OpenQbit.Institute.BLL.Service1.Contracts
     public interface IBatchManager
     {
 
-        bool Create(Batch batch);
-        Batch FindById(int batchId);
-        bool DeleteById(int batchId);
+        bool CreateBatch(Batch batch);
+        Batch FindByBatchId(int batchId);
+        bool DeleteByBatchId(int batchId);
 
-        bool Delete(Batch batch);
+        bool DeleteBatch(Batch batch);
 
-        Batch Find(Expression<Func<Batch, bool>> predicate);
+        Batch FindBatch(Expression<Func<Batch, bool>> predicate);
 
-        List<Batch> FindList(Expression<Func<Batch, bool>> predicate);
+        List<Batch> FindBatchList(Expression<Func<Batch, bool>> predicate);
 
-        bool Update(Batch batch);
+        bool UpdateBatch(Batch batch);
 
-        List<Batch> GetAll();
+        List<Batch> GetAllBatch();
+
+
+        ///////////////////////////////////////////////////
+
+        bool CreateBatchEnrolment(BatchEnrolment batchEnrolment);
+        BatchEnrolment FindByBatchEnrolmentId(int batchEnrolmentId);
+        bool DeleteByBatchEnrolmentId(int batchId);
+
+        bool DeleteBatchEnrolment(BatchEnrolment batchEnrolment);
+
+        BatchEnrolment FindBatchEnrolment(Expression<Func<BatchEnrolment, bool>> predicate);
+
+        List<BatchEnrolment> FindBatchList(Expression<Func<BatchEnrolment, bool>> predicate);
+
+        bool UpdateBatchEnrolment(BatchEnrolment batchEnrolment);
+
+        List<BatchEnrolment> GetAllBatchEnrolment();
 
         bool Save();
     }

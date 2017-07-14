@@ -27,54 +27,110 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             _db = repository;
         }
 
-        public bool Create(Batch batch)
+        public bool CreateBatch(Batch batch)
         {
             //Some Logics If Applicable
             return _db.Create<Batch>(batch);
         }
 
-        public bool DeleteById(int batchId)
+        public bool DeleteByBatchId(int batchId)
         {
             // return  _db.FindList<Batch>(B => B.BatchId == batchId).FirsrtO;
             Batch batch = _db.Find<Batch>(B => B.BatchId == batchId);
             return _db.Delete<Batch>(batch);
 
         }
-        public bool Delete(Batch batch)
+        public bool DeleteBatch(Batch batch)
         {
             //Some Logics If Applicable
             return _db.Delete<Batch>(batch);
         }
 
         
-        public Batch FindById(int batchId)
+        public Batch FindByBatchId(int batchId)
         {
             return _db.Find<Batch>(B => B.BatchId == batchId);
         }
 
-        public Batch Find(Expression<Func<Batch, bool>> predicate)
+        public Batch FindBatch(Expression<Func<Batch, bool>> predicate)
         {
             return _db.Find<Batch>(predicate);
         }
 
-        public List<Batch> FindList(Expression<Func<Batch, bool>> predicate)
+        public List<Batch> FindBatchList(Expression<Func<Batch, bool>> predicate)
         {
             return _db.FindList<Batch>(predicate);
         }
 
-        public bool Update(Batch batch)
+        public bool UpdateBatch(Batch batch)
         {
             return _db.Update<Batch>(batch);
         }
 
-        public List<Batch> GetAll()
+        public List<Batch> GetAllBatch()
         {
             return _db.GetAll<Batch>();
+        }
+
+        ///////////////////////////////////////////////////////////////
+        ////////////////// BatchEnrolment //////////////////////////////
+        ////////////////////////////////////////////////////////////////
+
+        public bool CreateBatchEnrolment(BatchEnrolment batchEnrolment)
+        {
+            //Some Logics If Applicable
+            return _db.Create<BatchEnrolment>(batchEnrolment);
+        }
+
+        public bool DeleteByBatchEnrolmentId(int batchEnrolmentId)
+        {
+            // return  _db.FindList<Batch>(B => B.BatchId == batchId).FirsrtO;
+            BatchEnrolment batch = _db.Find<BatchEnrolment>(B => B.BatchEnrolmentId == batchEnrolmentId);
+            return _db.Delete<BatchEnrolment>(batch);
+
+        }
+        public bool DeleteBatchEnrolment(BatchEnrolment batchEnrolment)
+        {
+            //Some Logics If Applicable
+            return _db.Delete<BatchEnrolment>(batchEnrolment);
+        }
+
+
+        public BatchEnrolment FindByBatchEnrolmentId(int batchEnrolmentId)
+        {
+            return _db.Find<BatchEnrolment>(B => B.BatchEnrolmentId == batchEnrolmentId);
+        }
+
+        public BatchEnrolment FindBatchEnrolment(Expression<Func<BatchEnrolment, bool>> predicate)
+        {
+            return _db.Find<BatchEnrolment>(predicate);
+        }
+
+        public List<BatchEnrolment> FindBatchEnrolmentList(Expression<Func<BatchEnrolment, bool>> predicate)
+        {
+            return _db.FindList<BatchEnrolment>(predicate);
+        }
+
+        public bool UpdateBatchEnrolment(BatchEnrolment batchEnrolment)
+        {
+            return _db.Update<BatchEnrolment>(batchEnrolment);
+        }
+
+        public List<BatchEnrolment> GetAllBatchEnrolment()
+        {
+            return _db.GetAll<BatchEnrolment>();
         }
 
         public bool Save()
         {
             return _db.Save();
         }
+
+        public List<BatchEnrolment> FindBatchList(Expression<Func<BatchEnrolment, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

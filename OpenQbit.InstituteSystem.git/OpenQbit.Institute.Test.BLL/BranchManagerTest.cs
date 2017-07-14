@@ -41,10 +41,10 @@ namespace OpenQbit.Institute.Test.BLL
                 Institute = new Common.Models.Institute { InstituteName = "Test Institute" }
             };
 
-            bool ans = BranchManager.Create(branch);
+            bool ans = BranchManager.CreateBranch(branch);
             BranchManager.Save();
 
-            Branch branch1 = BranchManager.Find(B => B.Address == "Panadura");
+            Branch branch1 = BranchManager.FindBranch(B => B.Address == "Panadura");
 
             string expected = "Panadura";
             string actual = branch1.Address;
@@ -58,9 +58,9 @@ namespace OpenQbit.Institute.Test.BLL
         {
             UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
-            Branch branch = BranchManager.Find(B => B.BranchId == 115);
+            Branch branch = BranchManager.FindBranch(B => B.BranchId == 115);
 
-            bool ans = BranchManager.Delete(branch);
+            bool ans = BranchManager.DeleteBranch(branch);
             BranchManager.Save();
 
 
@@ -77,7 +77,7 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
-            List<Branch> list = BranchManager.GetAll();
+            List<Branch> list = BranchManager.GetAllBranch();
 
             foreach (Branch branch in list)
             {
@@ -93,7 +93,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
-            Branch branch1 = BranchManager.FindById(93);
+            Branch branch1 = BranchManager.FindByBranchId(93);
 
             int expected = 93;
             int actual = branch1.BranchId;
@@ -108,14 +108,14 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
-            Branch branch = BranchManager.FindById(91);
+            Branch branch = BranchManager.FindByBranchId(91);
 
             branch.Address = "Panadura" + DateTime.Now.ToString();
 
-            bool isUpdate = BranchManager.Update(branch);
+            bool isUpdate = BranchManager.UpdateBranch(branch);
             BranchManager.Save();
 
-            Branch branch1 = BranchManager.FindById(93);
+            Branch branch1 = BranchManager.FindByBranchId(93);
 
             string expected = "Panadura";
             string actual = branch1.Address;
@@ -131,7 +131,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
-            Branch branch1 = BranchManager.Find(B => B.BranchId == 92);
+            Branch branch1 = BranchManager.FindBranch(B => B.BranchId == 92);
 
             string expected = "Panadura";
             string actual = branch1.Address;

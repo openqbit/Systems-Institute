@@ -27,42 +27,48 @@ namespace OpenQbit.Institute.BLL.InstituteService1
             _db = repository;
         }
 
-
-        public bool Create<T>(T obj) where T : class
-        {
-          
-            return _db.Create(obj);
-        }
-
-        public bool Delete<T>(T obj) where T : class
+        public bool Create(Employee employee)
         {
             //Some Logics If Applicable
-            return _db.Delete(obj);
+            return _db.Create<Employee>(employee);
         }
 
-        public T Find<T>(Expression<Func<T, bool>> predicate) where T : class
+        public bool DeleteById(int employeeId)
         {
-            //Some Logics If Applicable
-            return _db.Find(predicate);
-        }
+            Employee employee = _db.Find<Employee>(E => E.EmployeeID == employeeId);
+            return _db.Delete<Employee>(employee);
 
-        public List<T> FindList<T>(Expression<Func<T, bool>> predicate) where T : class
-        {
-            //Some Logics If Applicable
-            return _db.FindList(predicate);
         }
-
-        public List<T> GetAll<T>() where T : class
+        public bool Delete(Employee employee)
         {
             //Some Logics If Applicable
-            return _db.GetAll<T>();
+            return _db.Delete<Employee>(employee);
         }
 
 
-        public bool Update<T>(T obj) where T : class
+        public Employee FindById(int employeeId)
         {
-            //Some Logics If Applicable
-            return _db.Update(obj);
+            return _db.Find<Employee>(E => E.EmployeeID == employeeId);
+        }
+
+        public Employee Find(Expression<Func<Employee, bool>> predicate)
+        {
+            return _db.Find<Employee>(predicate);
+        }
+
+        public List<Employee> FindList(Expression<Func<Employee, bool>> predicate)
+        {
+            return _db.FindList<Employee>(predicate);
+        }
+
+        public bool Update(Employee employee)
+        {
+            return _db.Update<Employee>(employee);
+        }
+
+        public List<Employee> GetAll()
+        {
+            return _db.GetAll<Employee>();
         }
 
         public bool Save()
