@@ -25,7 +25,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         public InstituteManager(IRepository repository, ILogger logger)
         {
             this._logger = logger;
-            _db = repository;
+            this._db = repository;
         }
 
         public bool Create(Common.Models.Institute institute)

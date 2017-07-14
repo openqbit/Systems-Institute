@@ -24,7 +24,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         public EmployeeManager(IRepository repository, ILogger logger)
         {
             this._logger = logger;
-            _db = repository;
+            this._db = repository;
         }
 
         public bool CreateEmployee(Employee employee)

@@ -23,7 +23,7 @@ namespace OpenQbit.Institute.BLL.InstituteService1
         public StudentManager(IRepository repository, ILogger logger)
         {
             this._logger = logger;
-            _db = repository;
+            this._db = repository;
         }
 
         public bool Create(Student student)
@@ -34,8 +34,8 @@ namespace OpenQbit.Institute.BLL.InstituteService1
 
         public bool DeleteById(int studentId)
         {
-            Student employee = _db.Find<Student>(S => S.StudentId == studentId);
-            return _db.Delete<Student>(employee);
+            Student subject = _db.Find<Student>(S => S.StudentId == studentId);
+            return _db.Delete<Student>(subject);
 
         }
         public bool Delete(Student student)
