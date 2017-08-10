@@ -54,7 +54,10 @@ namespace OpenQbit.Institute.Test.DAL
         {
 
             IRepository res = new Repository();
-            Batch batch = res.Find<Batch>(B => B.BatchId == 115);
+
+      //      List<Batch> batchList = res.GetAll<Batch>();
+
+            Batch batch = res.Find<Batch>(B => B.BatchId == 71);
 
             bool ans = res.Delete<Batch>(batch);
             res.Save();

@@ -96,16 +96,16 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
-            Common.Models.Institute institute = InstituteManager.FindById(91);
+            Common.Models.Institute institute = InstituteManager.FindById(5);
 
             institute.InstituteName = "IJSEPanadura" + DateTime.Now.ToString();
 
             bool isUpdate = InstituteManager.Update(institute);
             InstituteManager.Save();
 
-            Common.Models.Institute institute1 = InstituteManager.FindById(93);
+            Common.Models.Institute institute1 = InstituteManager.FindById(5);
 
-            string expected = "IJSEPanadura";
+            string expected = institute.InstituteName;
             string actual = institute1.InstituteName;
 
             Assert.AreEqual(expected, actual);
@@ -119,7 +119,7 @@ namespace OpenQbit.Institute.Test.BLL
             IInstituteManager InstituteManager = UnityResolver.Resolve<IInstituteManager>();
 
 
-            Common.Models.Institute institute = InstituteManager.Find(I => I.InstituteId == 92);
+            Common.Models.Institute institute = InstituteManager.Find(I => I.InstituteId == 96);
 
             string expected = "IJSEPanadura";
             string actual = institute.InstituteName;

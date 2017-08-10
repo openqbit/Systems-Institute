@@ -58,7 +58,7 @@ namespace OpenQbit.Institute.Test.BLL
         {
             UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
-            Branch branch = BranchManager.FindBranch(B => B.BranchId == 115);
+            Branch branch = BranchManager.FindBranch(B => B.BranchId == 3);
 
             bool ans = BranchManager.DeleteBranch(branch);
             BranchManager.Save();
@@ -93,9 +93,9 @@ namespace OpenQbit.Institute.Test.BLL
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
-            Branch branch1 = BranchManager.FindByBranchId(93);
+            Branch branch1 = BranchManager.FindByBranchId(88);
 
-            int expected = 93;
+            int expected = 88;
             int actual = branch1.BranchId;
 
             Assert.AreEqual(expected, actual);
@@ -108,16 +108,16 @@ namespace OpenQbit.Institute.Test.BLL
             UnityResolver.Register();
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
-            Branch branch = BranchManager.FindByBranchId(91);
+            Branch branch = BranchManager.FindByBranchId(84);
 
             branch.Address = "Panadura" + DateTime.Now.ToString();
 
             bool isUpdate = BranchManager.UpdateBranch(branch);
             BranchManager.Save();
 
-            Branch branch1 = BranchManager.FindByBranchId(93);
+            Branch branch1 = BranchManager.FindByBranchId(84);
 
-            string expected = "Panadura";
+            string expected = branch.Address;
             string actual = branch1.Address;
 
             Assert.AreEqual(expected, actual);
@@ -131,7 +131,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
-            Branch branch1 = BranchManager.FindBranch(B => B.BranchId == 92);
+            Branch branch1 = BranchManager.FindBranch(B => B.BranchId == 88);
 
             string expected = "Panadura";
             string actual = branch1.Address;

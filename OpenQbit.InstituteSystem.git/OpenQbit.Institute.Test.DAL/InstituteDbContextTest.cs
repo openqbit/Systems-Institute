@@ -111,9 +111,9 @@ namespace OpenQbit.Institute.Test.DAL
             InstituteDbContext res = new InstituteDbContext();
 
 
-            Batch batch1 = res.Set<Batch>().Find(99);
+            Batch batch1 = res.Set<Batch>().Find(60);
 
-            int expected = 99;
+            int expected = 60;
             int actual = batch1.BatchId;
 
             Assert.AreEqual(expected, actual);

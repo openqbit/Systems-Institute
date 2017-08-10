@@ -49,7 +49,7 @@ namespace OpenQbit.Institute.Test.BLL
         {
             UnityResolver.Register();
             IBatchManager BatchManager = UnityResolver.Resolve<IBatchManager>();
-            Batch batch = BatchManager.FindBatch(B => B.BatchId == 115);
+            Batch batch = BatchManager.FindBatch(B => B.BatchId == 59);
 
             bool ans = BatchManager.DeleteBatch(batch);
             BatchManager.Save();
