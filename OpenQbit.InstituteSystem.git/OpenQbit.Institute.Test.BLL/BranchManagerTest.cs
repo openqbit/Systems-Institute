@@ -131,7 +131,7 @@ namespace OpenQbit.Institute.Test.BLL
             IBranchManager BranchManager = UnityResolver.Resolve<IBranchManager>();
 
 
-            Branch branch1 = BranchManager.FindBranch(B => B.BranchId == 88);
+            Branch branch1 = BranchManager.FindBranch(B => B.BranchId ==96);
 
             string expected = "Panadura";
             string actual = branch1.Address;
